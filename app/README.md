@@ -1,3 +1,30 @@
+MVP Requirements:
+[] Grid to Display Cells
+[] Cells That Have:
+    [] current state alive/dead, 0,1
+    [] clickable:
+        [] can be clicked to allow user setup for initial cell config
+        [] should NOT be clickable while simulation is running
+    [] behaviors:
+        [] Toggle state functionality: switch between alive & dead either bc user manually
+        toggled cell before starting simu, or simu is running and rules of life caused cell
+        to change state
+[] An appropriate data structure to hold a grid of cells at least 25x25
+[] Text to display current generation # being displayed
+    [] Utilize a timeout function to build the next gen of cells & update the display at the chosen time interval
+[] Button(s) that start/stop animation
+[] Button to Clear Grid
+## 3+ custom features
+[] Add option that creates a random cell config users can load/run
+[] Allow users to specify speed of simulation
+[] Allow users to change dimension of grid being displayed
+[]
+[]
+[]
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
