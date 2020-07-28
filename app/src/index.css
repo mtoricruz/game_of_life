@@ -1,5 +1,5 @@
 body {
-  background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/squares.png) 
+  background-image: url('./backimg.jpg');
 }
 
 .app-container {
@@ -58,3 +58,20 @@ h1, h2, h3, h4 {
 h4 {
   margin-top: 0px;
 }
+
+.containers-a {
+  margin-top: 5%;
+  background-color: black;
+  opacity: 80%;
+  width: 25%;
+  height: 35%;
+  margin-left: 5%;
+}
+
+.rules {
+  display:flex;
+  font-size: larger;
+  flex-direction: column;
+}
+
+

@@ -3,8 +3,12 @@ import { ButtonToolbar, Dropdown, DropdownButton, Button } from 'react-bootstrap
 
 class Buttons extends React.Component {
 
-    handleSelect = (evt) => {
+    handleSize = (evt) => {
         this.props.gridSize(evt);
+    }
+
+    handleSpeed = (evt) => {
+        this.props.speedMenu(evt);
     }
 
 
@@ -21,19 +25,22 @@ class Buttons extends React.Component {
                     <Button className='btn btn-default mr-3' onClick={this.props.clearButton}>
                         Clear
                     </Button>
-                    <Button className='btn btn-default mr-3' onClick={this.props.slowButton}>
-                        Slow
-                    </Button>
-                    <Button className='btn btn-default mr-3' onClick={this.props.fastButton}>
-                        Fast
-                    </Button>
-                    <Button className='btn btn-default mr-3' onClick={this.props.randomButton}>
+                    <DropdownButton
+                        title='Speed'
+                        id='speed-menu'
+                        onSelect={this.handleSpeed}
+                        >
+                        <Dropdown.Item eventKey='1'>Slow</Dropdown.Item>
+                        <Dropdown.Item eventKey='2'>Regular</Dropdown.Item>
+                        <Dropdown.Item eventKey='3'>Fast</Dropdown.Item>
+                    </DropdownButton>
+                    <Button className='btn btn-default mr-3 ml-3' onClick={this.props.randomButton}>
                         Random
                     </Button>
                     <DropdownButton
                         title='Grid Size'
                         id='size-menu'
-                        onSelect={this.handleSelect}
+                        onSelect={this.handleSize}
                         >
                         <Dropdown.Item eventKey='1'>20x10</Dropdown.Item>
                         <Dropdown.Item eventKey='2'>50x30</Dropdown.Item>

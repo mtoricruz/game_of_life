@@ -56,7 +56,7 @@ class Main extends React.Component {
    }
 
    fastButton = () => {
-      this.speed = 10;
+      this.speed = 30;
       this.playButton();
    }
 
@@ -64,8 +64,24 @@ class Main extends React.Component {
       var grid = Array(this.rows).fill().map(() => Array(this.cols).fill(false));
       this.setState({
          gridFull: grid,
-         generation: 0
+         generation: 0,
+         speed: 0, 
       });
+   }
+
+   speedMenu = (speed) => {
+      switch (speed) {
+         case '1':
+            this.speed = 600;
+         break;
+         case '2':
+            this.speed = 250;
+         break;
+         case '3':
+            this.speed = 70;
+         break;
+      }
+      this.playButton()
    }
 
    gridSize = (size) => {
@@ -104,6 +120,7 @@ class Main extends React.Component {
             if (!g[i][j] && count === 3) g2[i][j] = true;
          }
       }
+      
       this.setState({
          gridFull: g2,
          generation: this.state.generation + 1
@@ -124,6 +141,7 @@ class Main extends React.Component {
                   pauseButton = {this.pauseButton}
                   slowButton = {this.slowButton}
                   fastButton = {this.fastButton}
+                  speedMenu = {this.speedMenu}
                   clearButton = {this.clearButton}
                   randomButton = {this.random}
                   gridSize = {this.gridSize}
@@ -134,16 +152,16 @@ class Main extends React.Component {
                   cols = {this.cols}
                   selectBox = {this.selectBox}
                   />
-               <div>nbsp</div>
+               &nbsp;
                <h2>Generations: {this.state.generation} </h2>
             </div>
-            <div className='containers'>
-               <h2>Rules:</h2>
+            <div className='containers-a'>
                <div className='rules'>
-                  <p>Rule # 1</p>
-                  <p>Rule # 2</p>
-                  <p>Rule # 3</p>
-                  <p>Rule # 4</p>
+                  <h2>Rules:</h2>
+                  <p>Rule # 1: Any live cell with fewer than two live neighbours dies, as if by underpopulation.</p>
+                  <p>Rule # 2: Any live cell with two or three live neighbours lives on to the next generation.</p>
+                  <p>Rule # 3: Any live cell with more than three live neighbours dies, as if by overpopulation.</p>
+                  <p>Rule # 4: Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</p>
                </div>
             </div>
          </div>
