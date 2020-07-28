@@ -18,9 +18,11 @@ MVP Requirements:
 [x] Add option that creates a random cell config users can load/run
 [x] Allow users to specify speed of simulation
 [x] Allow users to change dimension of grid being displayed
-[]
-[]
-[]
+
+## Improvements + Addons
+[] Don't run GoL when 0 boxes are alive
+[] Convert Speed buttons into dropdown list of speeds
+[] Don't allow user to add boxes while GoL is playing
 
 
 
