@@ -1,6 +1,6 @@
-MVP Requirements:
+## MVP Requirements:
 [x] Grid to Display Cells
-[] Cells That Have:
+[x] Cells That Have:
     [x] current state alive/dead, 0,1
     [x] clickable:
         [x] can be clicked to allow user setup for initial cell config
@@ -10,8 +10,6 @@ MVP Requirements:
         toggled cell before starting simu, or simu is running and rules of life caused cell
         to change state
 [x] An appropriate data structure to hold a grid of cells at least 25x25
-[x] Text to display current generation # being displayed
-    [] Utilize a timeout function to build the next gen of cells & update the display at the chosen time interval
 [x] Button(s) that start/stop animation
 [x] Button to Clear Grid
 ## 3+ custom features
@@ -21,9 +19,11 @@ MVP Requirements:
 
 ## Improvements + Addons
 [] Don't run GoL when 0 boxes are alive
-[] Convert Speed buttons into dropdown list of speeds
-[] Don't allow user to add boxes while GoL is playing
+[x] Convert Speed buttons into dropdown list of speeds
 
+## Refactor
+Pre Refactor: 295 lines of code total
+Post Refactor: lines of code total
 
 
 
