@@ -5,7 +5,6 @@ import '../index.css'
 
 class Main extends React.Component {
 
-
    constructor() {
       super();
       this.speed = 250;
@@ -48,6 +47,7 @@ class Main extends React.Component {
 
    pauseButton = () => {
       clearInterval(this.intervalId);
+      console.log('PAUSE')
    }
 
    slowButton = () => {
@@ -77,9 +77,8 @@ class Main extends React.Component {
          case '2':
             this.speed = 250;
          break;
-         case '3':
+         default:
             this.speed = 70;
-         break;
       }
       this.playButton()
    }
@@ -118,6 +117,7 @@ class Main extends React.Component {
             if (i < this.rows - 1 && this.cols -1) if (g[i + 1][j + 1]) count++;
             if (g[i][j] && (count < 2 || count > 3)) g2[i][j] = false;
             if (!g[i][j] && count === 3) g2[i][j] = true;
+            if (g.every(i) === 0) this.pauseButton();
          }
       }
       
