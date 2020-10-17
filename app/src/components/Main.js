@@ -1,7 +1,6 @@
 import React from 'react';
 import Grid from './Grid';
-import Buttons from './Buttons'
-import '../index.css'
+import Buttons from './Buttons';
 
 class Main extends React.Component {
 
@@ -47,7 +46,6 @@ class Main extends React.Component {
 
    pauseButton = () => {
       clearInterval(this.intervalId);
-      console.log('PAUSE')
    }
 
    slowButton = () => {
@@ -158,10 +156,10 @@ class Main extends React.Component {
             <div className='containers-a'>
                <div className='rules'>
                   <h2>Rules:</h2>
-                  <p>Rule # 1: Any live cell with fewer than two live neighbours dies, as if by underpopulation.</p>
-                  <p>Rule # 2: Any live cell with two or three live neighbours lives on to the next generation.</p>
-                  <p>Rule # 3: Any live cell with more than three live neighbours dies, as if by overpopulation.</p>
-                  <p>Rule # 4: Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</p>
+                  <p>#1: Any live cell with fewer than two live neighbours dies, as if by underpopulation.</p>
+                  <p>#2: Any live cell with two or three live neighbours lives on to the next generation.</p>
+                  <p>#3: Any live cell with more than three live neighbours dies, as if by overpopulation.</p>
+                  <p>#4: Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</p>
                </div>
             </div>
          </div>
