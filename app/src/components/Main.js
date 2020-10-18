@@ -115,10 +115,8 @@ class Main extends React.Component {
             if (i < this.rows - 1 && this.cols -1) if (g[i + 1][j + 1]) count++;
             if (g[i][j] && (count < 2 || count > 3)) g2[i][j] = false;
             if (!g[i][j] && count === 3) g2[i][j] = true;
-            if (g.every(i) === 0) this.pauseButton();
          }
       }
-      
       this.setState({
          gridFull: g2,
          generation: this.state.generation + 1
