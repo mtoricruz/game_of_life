@@ -73,6 +73,7 @@ h4 {
   display:flex;
   font-size: larger;
   flex-direction: column;
+  text-align: left;
 }
 
 
